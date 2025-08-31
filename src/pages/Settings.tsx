@@ -8,7 +8,7 @@ export const Settings = () => {
             <Table<{ date: string }>
                 data={generateDateStringArray(7).map((date) => ({ date }))}
                 scheme={[
-                    { id:date, name: "Дата", getValue: (row) => row.date },
+                    { id: "date", name: "Дата", getValue: (row) => row.date },
                     ...generateTimeArray().map((time) => ({
                         id: time,
                         getValue() {
