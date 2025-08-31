@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+
+  &.active {
+    background-color: var(--active-bg);
+    color: var(--text-active);
+  }
+}
