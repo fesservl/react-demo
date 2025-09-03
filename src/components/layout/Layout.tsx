@@ -9,7 +9,6 @@ type LayoutProps = {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true)
 
   return (
     <div
@@ -21,16 +20,6 @@ export const Layout = ({ children }: LayoutProps) => {
         overflow: 'hidden'
       }}
     >
-      <Sidebar isOpen={isSidebarOpen} />
-      <div
-        className={styles.sidebarHandle}
-        onClick={() => setSidebarOpen(v => !v)}
-        tabIndex={0}
-        aria-label={isSidebarOpen ? 'Скрыть сайдбар' : 'Показать сайдбар'}
-        role="button"
-        onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && setSidebarOpen(v => !v)}
-        data-closed={!isSidebarOpen}
-      />
       <MainContent>{children}</MainContent>
     </div>
   )
